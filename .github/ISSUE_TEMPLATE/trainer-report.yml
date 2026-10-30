@@ -1,0 +1,68 @@
+name: Trainer compatibility report
+description: Share what worked or did not work with your trainer in indr.cc.
+title: 'Trainer: '
+body:
+  - type: markdown
+    attributes:
+      value: 'This report will be public. Please do not include private GPX files, locations, device identifiers, or personal information.'
+  - type: input
+    id: model
+    attributes:
+      label: Trainer manufacturer and exact model
+      placeholder: e.g. Wahoo KICKR CORE 2
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Trainer firmware version
+      placeholder: Version or unknown
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, version and operating system
+      placeholder: e.g. Chrome 130 on Windows 11
+    validations:
+      required: true
+  - type: dropdown
+    id: connection
+    attributes:
+      label: Bluetooth FTMS connection and power data
+      options:
+        - Works
+        - Does not work
+        - Partly works
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: route
+    attributes:
+      label: Route gradient and resistance
+      options:
+        - Works
+        - Does not work
+        - Partly works
+        - Not tested
+    validations:
+      required: true
+  - type: dropdown
+    id: erg
+    attributes:
+      label: ERG workout power targets
+      options:
+        - Works
+        - Does not work
+        - Partly works
+        - Not tested
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What did you try and what happened?
+      description: Include relevant steps and limitations; omit identifying data.
+    validations:
+      required: true
